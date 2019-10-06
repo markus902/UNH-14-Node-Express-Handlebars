@@ -5,7 +5,7 @@ var orm = {
         var queryString = "SELECT * FROM burgers";
         connection.query(queryString, function (err, result) {
             if (err) throw err;
-            console.log(result);
+            console.log("response: " + result);
             cb(result);
         });
     },
