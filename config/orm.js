@@ -9,12 +9,12 @@ var orm = {
             cb(result);
         });
     },
-
-    newBurger: function (tableInput, colToSearch, valOfCol) {
-        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-        connection.query(queryString, [tableInput, colToSearch, valOfCol], function (err, result) {
+    create: function (table, cols, vals, cb) {
+        var queryString = `INSERT INTO ${table} (burger_name, devoured) VALUES (?, ?)`;
+        connection.query(queryString, vals, function (err, result) {
             if (err) throw err;
             console.log(result);
+            cb(result);
         });
     }
 }
