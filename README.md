@@ -6,9 +6,7 @@ This app is a proof of concept for the use of my first fullstack app using the M
 
 ### Code structure
 
-The app uses an express server connecting to a database that stores the burger data (name and status). The app use and ORM to 
-
- with routes pointing to the home and the survey page with GET requests. When the form on the survey page is submitted a POST request gets triggered and sends the selected values to an array in the friends.js module (as an improvement a database could be implemented here). The logic in the api route compares this array with the predefinded arrays of the fiends and calculated the minimal ablolute difference for each index and sums up all results. Finally, the api responds with and array of the friend that had the lowes total difference to the users inputs. This array is converted into front-end visuals.
+The app uses an express server connecting to a database that stores the burger data (name and status). The app uses an ORM to connect to the database and created, updates and reads entries. Based on the status of each burger, it gets rendered to the appropriate section.
 
 ### File sturcture
 
