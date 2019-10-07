@@ -2,7 +2,7 @@
 
 ### Description and usage
 
-This app is a simple proof of concept for the use of an express server and its routing. The user of the app is guided from a homepage to a survey to find a potential best fiend among some predefined VIPs. The questions or statements in the survey have to be answered by selecting dropdonwns with values from 1 to 10. When the survey is submitted the user gets prompted a suggested friend with name and picture.
+This app is a proof of concept for the use of an express server and its routing. The user of the app is guided from a homepage to a survey to find a potential best fiend among some predefined VIPs. The questions or statements in the survey have to be answered by selecting dropdonwns with values from 1 to 10. When the survey is submitted the user gets prompted a suggested friend with name and picture.
 
 ### Code structure
 
