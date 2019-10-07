@@ -25,6 +25,7 @@ $(".burgerButton").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
+    $("#eat-gif").show();
     console.log("eat Burger");
     console.log(this);
     var id = this.id;
@@ -40,7 +41,9 @@ $(".burgerButton").on("click", function (event) {
         function () {
             console.log("updated burger status", newBurgerStatus);
             // Reload the page to get the updated list
-            location.reload();
+            setTimeout(function () {
+                location.reload()
+            }, 2000);
         }
     );
 });

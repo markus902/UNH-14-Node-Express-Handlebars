@@ -1,3 +1,19 @@
 body {
     background-color: orange !important;
 }
+
+h1 {
+    padding: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold !important;
+    color: black;
+    font-size: 4rem !important;
+    background-image: url("./burger.jpg");
+    /* background-position: ; */
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+#eat-gif {
+    display: none;
+}
