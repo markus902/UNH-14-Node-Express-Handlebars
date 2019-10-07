@@ -11,11 +11,11 @@ var burger = {
             cb(data);
         });
     },
-    update: function (id, status, cb) {
-        orm.update("burgers", id, status, function (data) {
+    update: function (status, condition, cb) {
+        orm.update("burgers", status, condition, function (data) {
                 cb(data)
             },
-            conditions, cb);
+            condition, cb);
     }
 };
 

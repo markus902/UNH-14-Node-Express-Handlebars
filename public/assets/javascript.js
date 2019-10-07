@@ -21,24 +21,26 @@ $(".create-form").on("submit", function (event) {
     );
 });
 
-$("#eat-form").on("submit", function (event) {
+$(".burgerButton").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     console.log("eat Burger");
+    console.log(this);
+    var id = this.id;
     var newBurgerStatus = {
         status: 1
     };
 
     // Send the POST request.
-    $.ajax("/api/burgers/", {
+    $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newBurgerStatus
     }).then(
         function () {
-            console.log("updated burger status");
+            console.log("updated burger status", newBurgerStatus);
             // Reload the page to get the updated list
-            // location.reload();
+            location.reload();
         }
     );
 });

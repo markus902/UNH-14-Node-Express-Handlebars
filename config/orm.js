@@ -17,10 +17,10 @@ var orm = {
             cb(result);
         });
     },
-    update: function (table, id, status, cb) {
-        var queryString = `UPDATE ${table} SET devoured = ${status} WHERE ${id}`
+    update: function (table, status, condition, cb) {
+        var queryString = `UPDATE ${table} SET devoured = ${status} WHERE ${condition}`
 
-        connection.query(queryString, function (err, result) {
+        connection.query(queryString, function (err, res) {
             if (err) throw err;
             console.log(res)
             cb(res);

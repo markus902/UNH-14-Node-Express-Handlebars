@@ -17,16 +17,15 @@
         </div>
         <div class="col col-sm-4">
             <h2>Eat Burger</h2>
-            <ul>
+            <ul class="text-right">
                 {{#each burgers}}
                 {{#unless devoured}}
                 {{burger_name}}
+                <button type="submit" class="burgerButton" id="{{id}}" value="1">Eat Burger</button>
+                <br>
                 {{/unless}}
                 {{/each}}
             </ul>
-            <form class="{{id}}" id="eat-form">
-                <button type="submit" value="1">Eat Burger</button>
-            </form>
         </div>
 
         <div class="col col-sm-4">
