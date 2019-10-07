@@ -11,10 +11,9 @@ var burger = {
             cb(data);
         });
     },
-    update: function (id, cb) {
-        var condition = "id=" + id;
-        orm.update("burgers", {
-                devoured: true
+    update: function (id, status, cb) {
+        orm.update("burgers", id, status, function (data) {
+                cb(data)
             },
             conditions, cb);
     }

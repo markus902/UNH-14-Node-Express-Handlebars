@@ -16,7 +16,16 @@ var orm = {
             console.log(result);
             cb(result);
         });
-    }
-}
+    },
+    update: function (table, id, status, cb) {
+        var queryString = `UPDATE ${table} SET devoured = ${status} WHERE ${id}`
+
+        connection.query(queryString, function (err, result) {
+            if (err) throw err;
+            console.log(res)
+            cb(res);
+        });
+    },
+};
 
 module.exports = orm;
